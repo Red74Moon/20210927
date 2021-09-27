@@ -3,20 +3,37 @@ using namespace std;
 
 int main()
 {
-	// 숫자를 입력받아서 짝수, 홀수 를 판별하는 프로그램을 작성
+	// 성적을 입력 받아서
+	// 100 - 90 A
+	// 90 - 80 B
+	// 80 - 70 C
+	// 70 - 60 D
+	// 60 - F
 	
-	int Number = 0;
+	int Score = 0;
 
-	cout << "판별할 숫자를 입력하세요 : ";
-	cin >> Number;
+	cout << "성적을 입력하세요 (0~100) : ";
+	cin >> Score;
 
-	if ((Number % 2) == 0)
+	if (Score >= 90 && Score <= 100 )
 	{
-		cout << "짝수 입니다." << endl;
+		cout << "성적은 " << " A " << " 입니다." << endl;
+	}
+	else if (Score >= 80 && Score < 90)
+	{
+		cout << "성적은 " << " B " << " 입니다." << endl;
+	}
+	else if (Score >= 70 && Score < 80)
+	{
+		cout << "성적은 " << " C " << " 입니다." << endl;
+	}
+	else if (Score >= 60 && Score < 70)
+	{
+		cout << "성적은 " << " D " << " 입니다." << endl;
 	}
 	else
 	{
-		cout << "홀수 입니다." << endl;
+		cout << "성적은 " << " F " << " 입니다." << endl;
 	}
 
 	return 0;

@@ -4,17 +4,17 @@
 
 using namespace std;
 
-int main()
+int Number[10];
+void Initialize()
 {
-	// 배열 난수 발생 섞기
-
-	int Number[10];
 	for (int i = 0; i < 10; i++)
 	{
 		Number[i] = i + 1;
 	}
+}
 
-	// 난수 초기화 0 ~ RAND_MAX
+void Shuffle()
+{
 	srand((unsigned int)time(NULL));
 
 	//숫자 섞기 (shuffle)
@@ -29,13 +29,36 @@ int main()
 		Number[R] = Number[R2];
 		Number[R2] = Temp;
 
-		cout << Number[R] << endl;
+	//	cout << Number[R] << endl;
 	}
-	cout << endl;
-	// 출력
+}
+
+void Disply()
+{
 	for (int i = 0; i < 10; i++)
 	{
 		cout << Number[i] << endl;
 	}
+}
+
+
+//funtion 
+
+//반환형(int, float, bool, void, char) 함수이름(인자(void))
+//{
+// to do
+//}
+
+int main()
+{
+	// 초기화
+	Initialize();
+
+	Shuffle();
+	
+	//Display
+	// 출력
+	Disply();
+
 	return 0;
 }

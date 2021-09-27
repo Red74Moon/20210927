@@ -25,3 +25,10 @@ int Mod(int First, int Second)
 {
 	return First % Second;
 }
+
+void Swap(int* First, int* Second)
+{
+	int Temp = *First;
+	*First = *Second;
+	*Second = Temp;
+}

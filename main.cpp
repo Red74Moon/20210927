@@ -12,12 +12,7 @@ using namespace std;
 
 //function, call by value 에서 (* pointer)를 만들어서 구현
 //Call by Value로 Call by Refercen 구현
-void Swap(int* First, int* Second)
-{
-	int Temp = *First;
-	*First = *Second;
-	*Second = Temp;
-}
+
 
 int main()
 {
@@ -26,9 +21,6 @@ int main()
 
 	cout << First << endl;
 	cout << Second << endl;
-
-	int* PA = &First;
-	cout << *PA << endl;
 
 	Swap(&First, &Second);
 

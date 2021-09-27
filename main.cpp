@@ -1,16 +1,9 @@
 #include <iostream>
-#include <cstdlib>
-#include <ctime>
+#include "Utility.h"
 
 using namespace std;
 
-//함수 만들기
-
-int Add(int First, int Second);
-int Minus(int First, int Second);
-int Mutifly(int First, int Second);
-int Division(int First, int Second);
-int Mod(int First, int Second);
+//함수 파일로 나누어 만들기
 
 int main()
 {
@@ -24,29 +17,4 @@ int main()
 	cout << Mod(A, B) << endl;
 
 	return 0;
-}
-
-int Add(int First, int Second)
-{
-	return First + Second;
-}
-
-int Minus(int First, int Second)
-{
-	return First - Second;
-}
-
-int Mutifly(int First, int Second)
-{
-	return First * Second;
-}
-
-int Division(int First, int Second)
-{
-	return First / Second;
-}
-
-int Mod(int First, int Second)
-{
-	return First % Second;
 }

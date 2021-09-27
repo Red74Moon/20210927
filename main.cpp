@@ -3,66 +3,43 @@
 #include <ctime>
 
 using namespace std;
-//funtion 구현 방법
-//반환형(int, float, bool, void, char) 함수이름(인자(void))
-//{
-// to do
-//}
-// 
-//함수 선언
-void Initialize();
-void Shuffle();
-void Disply();
 
-int Number[10];
+//함수 만들기
 
-int main(int argc, char* args)
+int Add(int First, int Second);
+int Minus(int First, int Second);
+int Mutifly(int First, int Second);
+int Division(int First, int Second);
+
+int main()
 {
-	//Initialize
-	Initialize();
+	int A = 10;
+	int B = 5;
 
-	//Shuffle
-	Shuffle();
-	
-	//Display
-	Disply();
+	cout << Add(A, B) << endl;
+	cout << Minus(A, B) << endl;
+	cout << Mutifly(A, B) << endl;
+	cout << Division(A, B) << endl;
 
 	return 0;
 }
 
-
-void Initialize()
+int Add(int First, int Second)
 {
-	for (int i = 0; i < 10; i++)
-	{
-		Number[i] = i + 1;
-	}
+	return First + Second;
 }
 
-void Shuffle()
+int Minus(int First, int Second)
 {
-	srand((unsigned int)time(NULL));
-
-	//숫자 섞기 (shuffle)
-	for (int i = 0; i < 10; i++)
-	{
-		// 0 - 9
-		int R = rand() % 10;
-		// to do 
-		int R2 = rand() % 10;
-
-		int Temp = Number[R];
-		Number[R] = Number[R2];
-		Number[R2] = Temp;
-
-		//	cout << Number[R] << endl;
-	}
+	return First - Second;
 }
 
-void Disply()
+int Mutifly(int First, int Second)
 {
-	for (int i = 0; i < 10; i++)
-	{
-		cout << Number[i] << endl;
-	}
+	return First * Second;
+}
+
+int Division(int First, int Second)
+{
+	return First / Second;
 }

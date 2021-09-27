@@ -3,42 +3,24 @@ using namespace std;
 
 int main()
 {
-	// 입력받은 구구단 출력
+	// 비교 연산자
+	// >, <, >=, <= , ==, !=
 
 	int Number = 0;
-	int i = 0;
-	int j = 0;
-
-	cout << "출력할 구구단을 적으세요(1~10) : ";
+	cout << "출력할 구구단을 입력새 주세요 : ";
 	cin >> Number;
 
-	for (i = 1; i <= 9; i++)
+	// 논리연산자
+	// AND &&
+	// OR ||
+	// NOT !
+	if (1 <= Number && Number <= 9)
 	{
-		cout << Number << " * " << i << " = " << Number * i << endl;
+		cout << "구구단에 접합한 수입니다." << endl;
 	}
-	cout << endl << endl;
-
-	// 구구단 출력 새로로 출력
-
-	for (i = 2; i <=9; i++)
+	else
 	{
-		for (j = 1; j <= 9; j++)
-		{
-			cout << i << " * " << j << " = " << i * j <<endl;
-		}
-		cout << endl;
-	}
-
-	// 구구단 가로로 3개씩 출력 (아직 미완성)
-
-	for (i = 1; i < 10; i++)
-	{
-		for (j = 1; j < 4; j++)
-		{
-			cout << i << " * " << j << " = " << i * j << "\t";
-			j += 3;
-		}
-		cout << endl;
+		cout << "다시 입력해 주세요 (1~9)" << endl;
 	}
 
 	return 0;

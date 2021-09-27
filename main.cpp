@@ -11,6 +11,7 @@ int main()
 	// 60 - F
 	
 	int Score = 0;
+Restart:
 
 	cout << "성적을 입력하세요 (0~100) : ";
 	cin >> Score;
@@ -33,7 +34,8 @@ int main()
 	}
 	else if (Score > 101 || Score < 0)
 	{
-		cout << "잘못 입력하였습니다." << endl;
+		cout << "잘못 입력하였습니다." << endl << endl;
+		goto Restart;
 	}
 	else 
 	{

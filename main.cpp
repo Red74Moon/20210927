@@ -7,6 +7,8 @@ int main()
 	// >, <, >=, <= , ==, !=
 
 	int Number = 0;
+	Reinput:
+
 	cout << "출력할 구구단을 입력새 주세요 : ";
 	cin >> Number;
 
@@ -21,6 +23,7 @@ int main()
 	else
 	{
 		cout << "다시 입력해 주세요 (1~9)" << endl;
+		goto Reinput;
 	}
 
 	return 0;

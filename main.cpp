@@ -1,27 +1,39 @@
 #include <iostream>
+#include <cstdlib>
+#include <ctime>
+
 using namespace std;
 
 int main()
 {
-	// swap
+	// 배열 난수 발생 섞기
 
-	int A = 10;
-	int B = 20;
+	int Number[10];
+	for (int i = 0; i < 10; i++)
+	{
+		Number[i] = i + 1;
+	}
 
-	//Process
-	//to Do
+	// 난수 초기화 0 ~ RAND_MAX
+	srand((unsigned int)time(NULL));
 
-	int Temp;
+	for (int i = 0; i < 10; i++)
+	{
+		// 0 - 9
+		int R = rand() % 10;
+		// to do 
 
-	Temp = A;
-	A = B;
-	B = Temp;
+		int Temp = Number[i];
+		Number[i] = Number[R];
+		Number[R] = Temp;
 
-	cout << A << endl;
-	cout << B << endl;
-	// 20
-	// 10
-
+		cout << Number[R] << endl;
+	}
+	cout << endl;
+	// 출력
+	for (int i = 0; i < 10; i++)
+	{
+		cout << Number[i] << endl;
+	}
 	return 0;
-
 }

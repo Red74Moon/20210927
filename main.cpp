@@ -3,8 +3,34 @@
 #include <ctime>
 
 using namespace std;
+//funtion 구현 방법
+//반환형(int, float, bool, void, char) 함수이름(인자(void))
+//{
+// to do
+//}
+// 
+//함수 선언
+void Initialize();
+void Shuffle();
+void Disply();
 
 int Number[10];
+
+int main(int argc, char* args)
+{
+	//Initialize
+	Initialize();
+
+	//Shuffle
+	Shuffle();
+	
+	//Display
+	Disply();
+
+	return 0;
+}
+
+
 void Initialize()
 {
 	for (int i = 0; i < 10; i++)
@@ -29,7 +55,7 @@ void Shuffle()
 		Number[R] = Number[R2];
 		Number[R2] = Temp;
 
-	//	cout << Number[R] << endl;
+		//	cout << Number[R] << endl;
 	}
 }
 
@@ -39,26 +65,4 @@ void Disply()
 	{
 		cout << Number[i] << endl;
 	}
-}
-
-
-//funtion 
-
-//반환형(int, float, bool, void, char) 함수이름(인자(void))
-//{
-// to do
-//}
-
-int main()
-{
-	// 초기화
-	Initialize();
-
-	Shuffle();
-	
-	//Display
-	// 출력
-	Disply();
-
-	return 0;
 }

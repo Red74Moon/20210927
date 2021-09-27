@@ -3,16 +3,25 @@ using namespace std;
 
 int main()
 {
-	int Number[10];
+	// swap
 
-	for (int i = 0; i < 10; i++)
-	{
-		Number[i] = i + 1;
-	}
-	for (int i = 0; i < 10; i++)
-	{
-		cout << Number[i] << endl;
-	}
+	int A = 10;
+	int B = 20;
+
+	//Process
+	//to Do
+
+	int Temp;
+
+	Temp = A;
+	A = B;
+	B = Temp;
+
+	cout << A << endl;
+	cout << B << endl;
+	// 20
+	// 10
+
 	return 0;
 
 }

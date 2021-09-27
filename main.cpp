@@ -3,18 +3,36 @@
 
 using namespace std;
 
-//함수 파일로 나누어 만들기
+//pointer
+//선언
+//변수* = int*, char* ->주소값 -> 메모리 위치 가르키는 화살표
+//*변수 = *First -> 화살표가 가르키는 메모리 위치의 값
+//&변수 = 변수의 메모리 위치(번지, Address)
+
+//function, call by value 에서 (* pointer)를 만들어서 구현
+//Call by Value로 Call by Refercen 구현
+void Swap(int* First, int* Second)
+{
+	int Temp = *First;
+	*First = *Second;
+	*Second = Temp;
+
+}
 
 int main()
 {
-	int A = 10;
-	int B = 5;
+	int First = 4;
+	int Second = 5;
 
-	cout << Add(A, B) << endl;
-	cout << Minus(A, B) << endl;
-	cout << Mutifly(A, B) << endl;
-	cout << Division(A, B) << endl;
-	cout << Mod(A, B) << endl;
+	cout << First << endl;
+	cout << Second << endl;
+
+	Swap(&First, &Second);
+
+	cout << endl << "Swap 이후 " << endl << endl;
+
+	cout << First << endl;
+	cout << Second << endl;
 
 	return 0;
 }

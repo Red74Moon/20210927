@@ -10,6 +10,7 @@ int Add(int First, int Second);
 int Minus(int First, int Second);
 int Mutifly(int First, int Second);
 int Division(int First, int Second);
+int Mod(int First, int Second);
 
 int main()
 {
@@ -20,6 +21,7 @@ int main()
 	cout << Minus(A, B) << endl;
 	cout << Mutifly(A, B) << endl;
 	cout << Division(A, B) << endl;
+	cout << Mod(A, B) << endl;
 
 	return 0;
 }
@@ -42,4 +44,9 @@ int Mutifly(int First, int Second)
 int Division(int First, int Second)
 {
 	return First / Second;
+}
+
+int Mod(int First, int Second)
+{
+	return First % Second;
 }

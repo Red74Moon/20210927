@@ -5,7 +5,7 @@ using namespace std;
 
 //pointer
 //선언
-//변수* = int*, char* ->주소값 -> 메모리 위치 가르키는 화살표
+//변수* = int*, char* -> 주소값 -> 메모리 위치 가르키는 화살표
 //사용법
 //*변수 = *First -> 화살표가 가르키는 메모리 위치의 값
 //&변수 = 변수의 메모리 위치(번지, Address)
@@ -26,6 +26,9 @@ int main()
 
 	cout << First << endl;
 	cout << Second << endl;
+
+	int* PA = &First;
+	cout << *PA << endl;
 
 	Swap(&First, &Second);
 

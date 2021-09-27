@@ -10,39 +10,43 @@ int main()
 	// 70 - 60 D
 	// 60 - F
 	// 선생님 도움 코드
+
 	int Score = 0;
 	char Grade = 'F';
-Restart:
 
 	cout << "성적을 입력하세요 (0~100) : ";
 	cin >> Score;
 
-	//성적처리
+	//성적처리 switch-case
 
-	if (Score <= 100 && Score >= 90 )
+	switch (Score /10)
 	{
-		Grade = 'A';
-	}
-	else if (Score < 90 && Score >= 80)
-	{
-		Grade = 'B';
-	}
-	else if (Score < 80 && Score >= 70)
-	{
-		Grade = 'C';
-	}
-	else if (Score < 70 && Score >= 60)
-	{
-		Grade = 'D';
-	}
-	else if (Score > 101 || Score < 0)
-	{
-		cout << "잘못 입력하였습니다." << endl << endl;
-		goto Restart;
-	}
-	else 
-	{
-		Grade = 'F';
+		case 10: 
+		case 9:
+		{
+			Grade = 'A';
+			break;
+		}
+		case 8:
+		{
+			Grade = 'B';
+			break;
+		}
+		case 7:
+		{
+			Grade = 'C';
+			break;
+		}
+		case 6:
+		{
+			Grade = 'D';
+			break;
+		}
+		default:
+		{
+			Grade = 'F';
+			break;
+		}
 	}
 	cout << "성적은 " << Grade << " 입니다." << endl;
 

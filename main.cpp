@@ -3,29 +3,20 @@ using namespace std;
 
 int main()
 {
-	// 비교 연산자
-	// >, <, >=, <= , ==, !=
-
+	// 숫자를 입력받아서 짝수, 홀수 를 판별하는 프로그램을 작성
+	
 	int Number = 0;
 
-	Reinput: // 표지판 역활 
-
-	cout << "출력할 구구단을 입력새 주세요 : ";
+	cout << "판별할 숫자를 입력하세요 : ";
 	cin >> Number;
 
-	// 논리연산자
-	// AND &&
-	// OR ||
-	// NOT !
-	if (1 <= Number && Number <= 9)
+	if ((Number % 2) == 0)
 	{
-		cout << "구구단에 접합한 수입니다." << endl;
+		cout << "짝수 입니다." << endl;
 	}
 	else
 	{
-		cout << "다시 입력해 주세요 (1~9)" << endl;
-		goto Reinput; 
-
+		cout << "홀수 입니다." << endl;
 	}
 
 	return 0;
